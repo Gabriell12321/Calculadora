@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Calculadora</title>
+<script type="text/javascript">
+
+function calcular() {
+
+var n1 = document.getElementById("n1").value;
+var n2 = document.getElementById("n2").value;
+var operacao = document.getElementById("operacao").value;
+var resultado;
+
+if (operacao == "soma") {
+resultado = parseFloat(n1) + parseFloat(n2);
+}
+else if (operacao == "subtracao") {
+resultado = parseFloat(n1) - parseFloat(n2);
+}
+else if (operacao == "multiplicacao") {
+resultado = parseFloat(n1) * parseFloat(n2);
+}
+else if (operacao == "divisao") {
+resultado = parseFloat(n1) / parseFloat(n2);
+}
+
+document.getElementById("resultado").innerHTML = resultado;
+
+}
+
+</script>
+</head>
+<body>
+
+<h1>Calculadora</h1>
+
+<form>
+
+<input type="text" id="n1" placeholder="Insira o primeiro número">
+
+<select id="operacao">
+<option value="soma">+</option>
+<option value="subtracao">-</option>
+<option value="multiplicacao">*</option>
+<option value="divisao">/</option>
+</select>
+
+<input type="text" id="n2" placeholder="Insira o segundo número">
+
+<input type="button" value="Calcular" onclick="calcular()">
+
+</form>
+
+<p>Resultado: <span id="resultado"></span></p>
+
+</body>
+</html>
